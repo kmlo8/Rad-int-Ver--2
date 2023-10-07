@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RAD</title>
+    <link rel="stylesheet" type="text/css" href="style/vihecles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inder&family=Inter:wght@100;300;500;900&family=Saira:ital,wght@1,100&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="car-bg">
+        <div class="title-cont">
+            <h1 align="center">new <br>inverntory</h1>
+            <p class="linee"></p>
+        </div>
+    </div>
+    <div class="container car-main-cont">
+        <div class="row">
+            <div class="child-cont" onclick="showCarDetails('Tesla Model 3')">
+                <img src="images/abus-1.JPG" alt="car-image-#1" class="car-img">
+                <div class="car-data">
+                    <h3 class="car-name">Tesla Model 3      <span class="car-year">2021</span></h3>
+                    <p class="pricing">Price: 202,500 USD</p>
+                    <p class="pricing">Price: 267,895,353 WON</p>
+                </div>
+            </div>
+            <div class="child-cont" onclick="showCarDetails('Toyota Crown')">
+                <img src="images/abus-1.JPG" alt="car-image-#1" class="car-img">
+                <div class="car-data">
+                    <h3 class="car-name">Toyota Crown      <span class="car-year">2023</span></h3>
+                    <p class="pricing">Price: 39,950 USD</p>
+                    <p class="pricing">Price: 53,409,093 WON</p>
+                </div>
+            </div>
+            <div class="child-cont" onclick="showCarDetails()">
+                <img src="images/abus-1.JPG" alt="car-image-#1" class="car-img">
+                <div class="car-data">
+                    <h3 class="car-name">Kamol </h3>
+                    <p class="pricing">Price: 202,500 USD</p>
+                    <p class="pricing">Price: 267,895,353 WON</p>
+                </div>
+            </div>
+            <div class="child-cont" onclick="showCarDetails()">
+                <img src="images/abus-1.JPG" alt="car-image-#1" class="car-img">
+                <div class="car-data">
+                    <h3 class="car-name">Tesla 3</h3>
+                    <p class="pricing">Price: 202,500 USD</p>
+                    <p class="pricing">Price: 267,895,353 WON</p>
+                </div>
+            </div>
+            <div class="child-cont" onclick="showCarDetails()">
+                <img src="images/abus-1.JPG" alt="car-image-#1" class="car-img">
+                <div class="car-data">
+                    <h3 class="car-name"> Model 3</h3>
+                    <p class="pricing">Price: 202,500 USD</p>
+                    <p class="pricing">Price: 267,895,353 WON</p>
+                </div>
+            </div>
+            <div class="child-cont" onclick="showCarDetails()">
+                <img src="images/abus-1.JPG" alt="car-image-#1" class="car-img">
+                <div class="car-data">
+                    <h3 class="car-name">DANIKI</h3>
+                    <p class="pricing">Price: 202,500 USD</p>
+                    <p class="pricing">Price: 267,895,353 WON</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- POPUP CONTAINER -->
+    <div class="popup-container" id="carDetailsPopup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="hideCarDetails()">&times;</span>
+            <div class="popup-grid">
+                <div class="cont-1">
+                    <div class="slider-container">
+                        <div class="slider">
+                            <img id="car-image" src="" alt="Image 1">
+                            <img id="car-image" src="" alt="Image 2">
+                            <img id="car-image" src="" alt="Image 3">
+                        </div>
+                        <button class="prev">&larr;</button>
+                        <button class="next">&rarr;</button>
+                    </div>
+                </div>
+
+                <div class="cont-2">
+                    <h2 id="car-title"></h2>
+                    <div class="car-info-cont">
+                        <div>Price: <span id="price-usd"></span> <strong>USD</strong></div>
+                        <div>Price: <span id="price-krw"></span> <strong>WON</strong></div>
+                        <div><strong>Interior Color:</strong> <span id="interior-color"></span></div>
+                        <div><strong>Exterior Color:</strong> <span id="exterior-color"></span></div>
+                        <div><strong>Fuel Type:</strong> <span id="fuel-type"></span></div>
+                        <div><strong>Engine:</strong> <span id="engine"></span></div>
+                        <div><strong>VIN:</strong> <span id="vin"></span></div>
+                    </div>
+                    <div class="car-features-cont">
+                        <div><strong>Features:</strong></div>
+                        <ul id="features">
+                            <li><strong>Convenience:</strong> <span id="convenience"></span></li>
+                            <li><strong>Environment:</strong> <span id="environment"></span></li>
+                            <li><strong>Exterior:</strong> <span id="exterior"></span></li>
+                            <li><strong>Safety:</strong> <span id="safety"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Js/carsData.js"></script>
+    <script src="Js/vihecles.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.car-main-cont {
+    padding: 4rem 0;
+    height: max-content;
+    position: relative;
+
+}
+
+.title-cont h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 700;
+    padding-top: 7.5rem;
+    color: #fff;
+}
+
+.linee {
+    margin: 0 auto;
+    width: 100px;
+    background-color: #5c3db8;
+    padding: 4px 0;
+}
+.car-data{
+    text-align: center;
+}
+.child-cont{
+    position: relative;
+    z-index: 1;
+}
+.child-cont:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: all .2s ease-in-out;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+}
+.car-name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    tab-size: 3;
+}
+.pricing {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.car-bg {
+    background-image: url(../images/bg2.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 30rem;
+}
+
+.car-img {
+    width: 300px;
+}
+
+.car-data {
+    padding: 1rem;
+}
+
+.row {
+    grid-gap: 3rem;
+}
+.car-year{
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+/* POPUP CONTAINER */
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.popup-grid{
+    display: grid;
+    padding: 1rem 0;
+    grid-template-columns: 1fr 1fr;
+}
+.car-info-cont{
+    float: left;
+}
+.car-features-cont{
+    float: right;
+}
+
+.close-popup{
+    cursor: pointer;
+}
+/* Popup container slider */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 300px;
+    margin-top: 1rem;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: auto;
+  }
+  
+  button {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    border: none;
+    border-radius: 50px;
+    background-color: beige;
+    transform: translateY(-50%);
+  }
+
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
